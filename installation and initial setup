@@ -1,0 +1,28 @@
+So friends ... let's talk about Ubuntu 18.04 "Core" and its latest transformation into Mate.
+Next, I will point out all the steps to get a normally functioning (of course, this is quite a bold expression) PC with the "Mate" desktop. 
+So, let's begin:
+
+$ sudo apt-get update
+$ sudo apt-get install bash-completion
+$ sudo reboot
+$ sudo service hostapd stop
+$ sudo apt-get autoremove hostapd
+$ sudo apt-get upgrade
+$ sudo apt-get dist-upgrade
+
+$ sudo apt-get install ubuntu-mate-desktop
+$ sudo reboot
+
+"org.freedesktop.DBus.Error.Spawn.ExecFailed"
+$ sudo chmod 4754 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+$ sudo chown root:messagebus /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+$ sudo reboot
+
+"org.freedesktop.DBus.Error.Spawn.PermissionsInvalid"
+$ sudo chmod u+s /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+
+"no icon to desktop"
+$ sudo apt-get install xserver-common 
+$ sudo apt-get install xserver-xorg-core
+$ sudo apt-get install xserver-xorg-legacy
+$ sudo reboot
