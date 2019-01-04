@@ -2,7 +2,7 @@ So friends ... let's talk about Ubuntu 18.04 "Core" and its latest transformatio
 Next, I will point out all the steps to get a normally functioning (of course, this is quite a bold expression) PC with the "Mate" desktop. 
 So, let's begin:
 
-**$ sudo apt-get update**
+$ sudo apt-get update
 $ sudo apt-get install bash-completion
 $ sudo reboot
 $ sudo service hostapd stop
